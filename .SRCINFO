@@ -1,0 +1,21 @@
+pkgbase = lur-git
+	pkgdesc = Local user ropository.
+	pkgver = 0.0.0.1.1.1.1.r8.g11f9348b215313677780da16c1098716534b0b80
+	pkgrel = 1
+	url = https://github.com/themartiancompany/lur
+	arch = any
+	groups = hip
+	groups = hip-git
+	license = AGPL3
+	checkdepends = shellcheck
+	makedepends = make
+	makedepends = curl
+	makedepends = jq
+	depends = ffmpeg
+	depends = reallymakepkg
+	provides = lur=0.0.0.1.1.1.1.r8.g11f9348b215313677780da16c1098716534b0b80
+	conflicts = lur
+	source = lur.tar.gz::https://github.com/themartiancompany/lur/archive/refs/heads/main.tar.gz
+	sha256sums = SKIP
+
+pkgname = lur-git
