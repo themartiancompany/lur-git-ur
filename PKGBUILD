@@ -8,7 +8,7 @@ _local=false
 _proj="hip"
 _pkgname=lur
 pkgname="${_pkgname}-git"
-pkgver="0.0.0.1.1.1.1".r8.g"11f9348b215313677780da16c1098716534b0b80"
+pkgver="0.0.0.0.0.0.0.0.0.0.0.0.0.1".rnull.g"f2e2bb57fa34c18485623de450786d5fa92e6e4a"
 pkgrel=1
 _pkgdesc=(
   "Local user ropository."

@@ -1,6 +1,6 @@
 pkgbase = lur-git
 	pkgdesc = Local user ropository.
-	pkgver = 0.0.0.1.1.1.1.r8.g11f9348b215313677780da16c1098716534b0b80
+	pkgver = 0.0.0.0.0.0.0.0.0.0.0.0.0.1.rnull.gf2e2bb57fa34c18485623de450786d5fa92e6e4a
 	pkgrel = 1
 	url = https://github.com/themartiancompany/lur
 	arch = any
@@ -13,7 +13,7 @@ pkgbase = lur-git
 	makedepends = jq
 	depends = ffmpeg
 	depends = reallymakepkg
-	provides = lur=0.0.0.1.1.1.1.r8.g11f9348b215313677780da16c1098716534b0b80
+	provides = lur=0.0.0.0.0.0.0.0.0.0.0.0.0.1.rnull.gf2e2bb57fa34c18485623de450786d5fa92e6e4a
 	conflicts = lur
 	source = lur.tar.gz::https://github.com/themartiancompany/lur/archive/refs/heads/main.tar.gz
 	sha256sums = SKIP
