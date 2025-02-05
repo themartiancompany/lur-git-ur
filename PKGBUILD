@@ -1,5 +1,24 @@
 # SPDX-License-Identifier: AGPL-3.0
+
+#    ----------------------------------------------------------------------
+#    Copyright © 2024, 2025  Pellegrino Prevete
 #
+#    All rights reserved
+#    ----------------------------------------------------------------------
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 # Maintainer:  Truocolo <truocolo@aol.com>
 # Maintainer:  Pellegrino Prevete <pellegrinoprevete@gmail.com>
 
@@ -28,14 +47,16 @@ license=(
   AGPL3
 )
 depends=(
-  ffmpeg
-  reallymakepkg
+  "aspe"
+  "libcrash-bash"
+  "pacman"
+  "reallymakepkg"
 )
 makedepends=(
-  make
+  'make'
 )
 checkdepends=(
-  shellcheck
+  'shellcheck'
 )
 optdepends=(
 )
@@ -54,21 +75,22 @@ _url="${url}"
   _url="${_local}"
 source=()
 _branch="main"
-[[ "${_git}" == true ]] && \
+if [[ "${_git}" == true ]]; then
   makedepends+=(
-    git
-  ) && \
+    'git'
+  )
   source+=(
     "${_pkgname}-${_branch}::git+${_url}#branch=${_branch}"
   )
-[[ "${_git}" == false ]] && \
+elif [[ "${_git}" == false ]]; then
   makedepends+=(
-    curl
-    jq
-  ) && \
+    'curl'
+    'jq'
+  )
   source+=(
     "${_pkgname}.tar.gz::${_url}/archive/refs/heads/${_branch}.tar.gz"
   )
+fi
 sha256sums=(
   SKIP
 )
